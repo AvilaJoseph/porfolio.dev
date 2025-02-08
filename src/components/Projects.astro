@@ -22,9 +22,8 @@ const PROJECTS = [
     title: "Plataforma Red de Emprededores - Sena Emprendimiento Nacional",
     description:
       "Plataforma Red de Emprendedores SENA - Marketplace nacional que conecta +5k emprendedores. Desarrollado con PHP, JavaScript y SQL, implementando autenticación, gestión de perfiles y panel administrativo con altos estándares de seguridad.",
-    link: "https://svgl.vercel.app/",
-    github: "https://github.com/pheralb/svgl",
-    image: "/projects/svgl.webp",
+    link: "https://tecnoparqueatl.com/redemprendedores/front/files/",
+    image: "/projects/redemprendedores.webp",
     tags: [TAGS.NEXT, TAGS.TAILWIND],
   },
   {
@@ -32,15 +31,15 @@ const PROJECTS = [
     description:
       "Plataforma Educativa CORMAGDALENA - Sistema LMS personalizado que integra complementos propios para +500 usuarios. Desarrollado con PHP, MySQL y JavaScript, implementando módulos de evaluación, seguimiento académico y una interfaz responsive optimizada.",
     link: "https://adventjs.dev",
-    image: "/projects/adventjs.webp",
+    image: "/projects/Cormagdalena.webp",
     tags: [TAGS.NEXT, TAGS.TAILWIND],
   },
   {
     title: "Plataforma50 - Landing Page Empresarial",
     description:
       "Plataforma50 - Desarrollo y optimización de landing page corporativa. Implementación de mejoras en rendimiento, SEO y experiencia de usuario. Desarrollado con PHP y Bootstrap, logrando una notable mejora en velocidad de carga y posicionamiento en buscadores.",
-    link: "https://adventjs.dev",
-    image: "/projects/adventjs.webp",
+    link: "https://www.plataforma50.com/",
+    image: "/projects/plataforma50.webp",
     tags: [TAGS.NEXT, TAGS.TAILWIND],
   },
 ]
@@ -48,7 +47,7 @@ const PROJECTS = [
 
 <div class="flex flex-col gap-y-16">
   {
-    PROJECTS.map(({ image, title, description, tags, link, github }) => (
+    PROJECTS.map(({ image, title, description, tags, link }) => (
     <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
   <div class="w-full md:w-1/2">
     <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
@@ -76,13 +75,13 @@ const PROJECTS = [
 
       <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
       <footer class="flex items-end justify-start mt-4 gap-x-4">
-          {github && (
+          {/* {github && (
             <LinkButton href={github}>
               <GitHub class="size-6" />
               Code
               
             </LinkButton>
-          )}
+          )} */}
           {link && (
             <LinkButton href={link}>
               <Link class="size-4" />
