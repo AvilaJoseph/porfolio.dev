@@ -4,6 +4,8 @@ import NextJS from "./icons/NextJS.astro"
 import Tailwind from "./icons/Tailwind.astro"
 import Link from "./icons/Link.astro"
 import LinkButton from "./LinkButton.astro"
+import PHP from "./icons/Php.astro"
+import JavaScript from "./icons/JavaScript.astro"
 
 const TAGS = {
   NEXT: {
@@ -16,6 +18,16 @@ const TAGS = {
     class: "bg-[#003159] text-white",
     icon: Tailwind,
   },
+  PHP: {
+    name: "PHP",
+    class: "bg-[#777BB3] text-white",
+    icon: PHP,
+  },
+  JAVASCRIPT: {
+    name: "JavaScript",
+    class: "bg-[#F1DC50] text-[#333]",
+    icon: JavaScript,
+  }
 }
 const PROJECTS = [
   {
@@ -24,7 +36,7 @@ const PROJECTS = [
       "Plataforma Red de Emprendedores SENA - Marketplace nacional que conecta +5k emprendedores. Desarrollado con PHP, JavaScript y SQL, implementando autenticación, gestión de perfiles y panel administrativo con altos estándares de seguridad.",
     link: "https://tecnoparqueatl.com/redemprendedores/front/files/",
     image: "/projects/redemprendedores.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    tags: [TAGS.PHP,TAGS.JAVASCRIPT,TAGS.TAILWIND],
   },
   {
     title: "Plataforma Elearning - Cormagdalena",
@@ -32,7 +44,7 @@ const PROJECTS = [
       "Plataforma Educativa CORMAGDALENA - Sistema LMS personalizado que integra complementos propios para +500 usuarios. Desarrollado con PHP, MySQL y JavaScript, implementando módulos de evaluación, seguimiento académico y una interfaz responsive optimizada.",
     link: "https://adventjs.dev",
     image: "/projects/Cormagdalena.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    tags: [TAGS.PHP, TAGS.TAILWIND],
   },
   {
     title: "Plataforma50 - Landing Page Empresarial",
@@ -40,7 +52,7 @@ const PROJECTS = [
       "Plataforma50 - Desarrollo y optimización de landing page corporativa. Implementación de mejoras en rendimiento, SEO y experiencia de usuario. Desarrollado con PHP y Bootstrap, logrando una notable mejora en velocidad de carga y posicionamiento en buscadores.",
     link: "https://www.plataforma50.com/",
     image: "/projects/plataforma50.webp",
-    tags: [TAGS.NEXT, TAGS.TAILWIND],
+    tags: [TAGS.PHP, TAGS.TAILWIND],
   },
 ]
 ---
