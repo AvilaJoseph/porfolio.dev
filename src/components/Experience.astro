@@ -1,10 +1,19 @@
 ---
 import ExperienceItem from "./ExperienceItem.astro"
 import Link from "./icons/Link.astro"
+
 const EXPERIENCE = [
   {
+    date: "Dic 2024 - Presente",
+    title: "Desarrollador FullStack",
+    company: "PLATAFORMA50",
+    description:
+      "Desarrollo de aplicaciones web escalables utilizando tecnologías modernas. Implementación de soluciones robustas tanto en frontend como backend, aplicando buenas prácticas de programación y metodologías ágiles para garantizar productos de alta calidad.",
+    link: "https://plataforma50.com/",
+  },
+  {
     date: "Jul 2024 - Dic 2024",
-    title: "Apoyo Técnico",
+    title: "Desarrollador FullStack-Apoyo Técnico",
     company: "Sena Emprendimiento Regional",
     description:
       "Desarrollo de una plataforma Marketplace con soluciones robustas en PHP, JavaScript y SQL. Implementación de funcionalidades clave con tecnologías web modernas, garantizando la seguridad de la información y la gestión de la documentación técnica.",
@@ -12,21 +21,88 @@ const EXPERIENCE = [
   },
   {
     date: "Ago 2023 - Abr 2024",
-    title: "Desarrollador Backend",
+    title: "Desarrollador de Software Junior",
     company: "TPD Industrial",
     description:
-      "Ejecución de la migración de servicios web en Java, aplicando mejores prácticas de desarrollo y asegurando la continuidad operativa durante la transición. Optimización del rendimiento de las aplicaciones y desarrollo de soluciones escalables que mejoraron la eficiencia de los procesos empresariales. Colaboración en la documentación técnica y en la implementación de estándares de calidad en el desarrollo de software.",
+      "Lideré un proyecto crítico de migración a nueva versión utilizando Java Web, máquinas virtuales Ubuntu y MongoDB. Desarrollé e implementé soluciones para modernizar la infraestructura existente, garantizando la integridad de datos y la continuidad del servicio durante la transición.",
     link: "https://tpdindustrial.co/",
   },
+  {
+    date: "Feb 2023 - Jul 2023",
+    title: "Desarrollador de Software Junior",
+    company: "ARECONSULTORIA S.A.S",
+    description:
+      "Participé en el diseño, desarrollo y mantenimiento de aplicaciones informáticas. Realicé pruebas de software para identificación y resolución de errores, y documenté meticulosamente código y procesos de desarrollo.",
+    link: "#",
+  },
+  {
+    date: "Jun 2022 - Ene 2023",
+    title: "Desarrollador de Software Junior",
+    company: "TECHNOSERVICE",
+    description:
+      "Asistí en el diseño y codificación de programas para producción de reportes y mantenimiento de archivos de información. Elaboré documentación completa de programas y preparé testeos de datos.",
+    link: "#",
+  },
+  {
+    date: "Ene 2022 - May 2022",
+    title: "Desarrollador de Software",
+    company: "SERVICIOS Y ASESORIAS CONSTRUMEGA CO SAS",
+    description:
+      "Implementé una plataforma integral de gestión de proyectos, desarrollando módulos para seguimiento de cronogramas, asignación de recursos, gestión documental y generación de reportes en tiempo real.",
+    link: "#",
+  },
 ]
+
+// Dividir la experiencia en visibles e inicialmente ocultas
+const visibleExperiences = EXPERIENCE.slice(0, 3);
+const hiddenExperiences = EXPERIENCE.slice(3);
 ---
 
 <ol class="relative mt-16">
   {
-    EXPERIENCE.map((experience) => (
-      <li class="">
+    visibleExperiences.map((experience) => (
+      <li>
         <ExperienceItem {...experience} />
       </li>
     ))
   }
 </ol>
+
+<!-- Experiencias ocultas inicialmente -->
+<ol id="hidden-experiences" class="relative hidden">
+  {
+    hiddenExperiences.map((experience) => (
+      <li>
+        <ExperienceItem {...experience} />
+      </li>
+    ))
+  }
+</ol>
+
+<div class="flex justify-center mt-6">
+  <button
+    id="show-more-btn"
+    class="bg-white/5 border border-white/10 rounded-full px-6 py-2 text-sm font-medium transition hover:bg-white/10"
+  >
+    Ver más experiencia
+  </button>
+</div>
+
+<script>
+  // Usar el modificador 'client:load' o 'client:idle' en Astro para hidratación
+  const showMoreBtn = document.getElementById('show-more-btn');
+  const hiddenExperiences = document.getElementById('hidden-experiences');
+  
+  if (showMoreBtn && hiddenExperiences) {
+    showMoreBtn.addEventListener('click', () => {
+      // Toggle la visibilidad de las experiencias ocultas
+      if (hiddenExperiences.classList.contains('hidden')) {
+        hiddenExperiences.classList.remove('hidden');
+        showMoreBtn.textContent = 'Ver menos';
+      } else {
+        hiddenExperiences.classList.add('hidden');
+        showMoreBtn.textContent = 'Ver más experiencia';
+      }
+    });
+  }
+</script>
