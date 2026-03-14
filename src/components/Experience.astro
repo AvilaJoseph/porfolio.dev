@@ -2,7 +2,15 @@
 import ExperienceItem from "./ExperienceItem.astro"
 import Link from "./icons/Link.astro"
 
-const EXPERIENCE = [
+export const EXPERIENCE = [
+  {
+    date: "Mar 2025 - Presente",
+    title: "Desarrollador Front End (Next.js)",
+    company: "SOFTGINVENT",
+    description:
+      "Desarrollo de interfaces web modernas y performantes con Next.js (App Router, SSR). Maquetación Pixel Perfect garantizando alta fidelidad visual y consistencia responsive mediante Tailwind CSS v3+. Arquitectura y construcción de componentes reutilizables orientados a escalabilidad y mantenibilidad. Integración fluida con APIs REST y servicios backend. Optimización de rendimiento, tiempos de carga y experiencia de usuario. Participación activa en ciclos de mejora continua bajo metodologías ágiles, en colaboración estrecha con el equipo de producto.",
+    link: "#",
+  },
   {
     date: "Dic 2024 - Presente",
     title: "Desarrollador FullStack",
@@ -13,8 +21,8 @@ const EXPERIENCE = [
   },
   {
     date: "Jul 2024 - Dic 2024",
-    title: "Desarrollador FullStack-Apoyo Técnico",
-    company: "Sena Emprendimiento Regional",
+    title: "Desarrollador FullStack - Apoyo Técnico",
+    company: "SENA Emprendimiento Regional",
     description:
       "Desarrollo de una plataforma Marketplace con soluciones robustas en PHP, JavaScript y SQL. Implementación de funcionalidades clave con tecnologías web modernas, garantizando la seguridad de la información y la gestión de la documentación técnica.",
     link: "https://www.sena.edu.co/es-co/trabajo/Paginas/fondo-emprender.aspx",
@@ -51,7 +59,7 @@ const EXPERIENCE = [
       "Implementé una plataforma integral de gestión de proyectos, desarrollando módulos para seguimiento de cronogramas, asignación de recursos, gestión documental y generación de reportes en tiempo real.",
     link: "#",
   },
-]
+];
 
 // Dividir la experiencia en visibles e inicialmente ocultas
 const visibleExperiences = EXPERIENCE.slice(0, 3);

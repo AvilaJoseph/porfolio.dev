@@ -1,11 +1,11 @@
 ---
-import GitHub from "./icons/GitHub.astro"
-import NextJS from "./icons/NextJS.astro"
-import Tailwind from "./icons/Tailwind.astro"
-import Link from "./icons/Link.astro"
-import LinkButton from "./LinkButton.astro"
-import PHP from "./icons/Php.astro"
-import JavaScript from "./icons/JavaScript.astro"
+import GitHub from "./icons/GitHub.astro";
+import NextJS from "./icons/NextJS.astro";
+import Tailwind from "./icons/Tailwind.astro";
+import Link from "./icons/Link.astro";
+import LinkButton from "./LinkButton.astro";
+import PHP from "./icons/Php.astro";
+import JavaScript from "./icons/JavaScript.astro";
 
 const TAGS = {
   NEXT: {
@@ -27,16 +27,57 @@ const TAGS = {
     name: "JavaScript",
     class: "bg-[#F1DC50] text-[#333]",
     icon: JavaScript,
-  }
-}
+  },
+};
 const PROJECTS = [
+  {
+    title: "AGROJAM SENA - Landing Page del Evento",
+    description:
+      "Landing page oficial del evento AGROJAM del SENA, orientada a la divulgación, registro y promoción de una jornada de innovación abierta enfocada en el sector agropecuario. Desarrollo de una interfaz informativa y atractiva que presenta la agenda del evento, patrocinadores, ubicación, cuenta regresiva, formularios de inscripción y contenidos editoriales. Enfoque en experiencia de usuario, diseño responsive y claridad en la comunicación del evento.",
+    link: "https://tesorostpatl.com.co/agrojam/",
+    image: "/projects/agrojam-landing.webp",
+    tags: [TAGS.PHP, TAGS.JAVASCRIPT, TAGS.TAILWIND],
+  },
+  {
+    title: "AGROJAM SENA - Plataforma de Evaluación y Calificación",
+    description:
+      "Plataforma web desarrollada para la gestión interna del evento AGROJAM del SENA, destinada a la evaluación y calificación de los equipos concursantes. Incluye módulos de registro de participantes, asignación de jurados, criterios de evaluación, calificación de proyectos y consolidación de resultados. Sistema diseñado para soportar convocatorias anuales, garantizando trazabilidad, organización y control del proceso evaluativo.",
+    link: "https://tesorostpatl.com.co/agrojam/admin",
+    image: "/projects/agrojam-admin.webp",
+    tags: [TAGS.PHP, TAGS.JAVASCRIPT, TAGS.TAILWIND],
+  },
+  {
+    title: "Las Melinas - Refugio Natural en Piojó",
+    description:
+      "Landing page desarrollada para un refugio natural ubicado en Aguas Vivas, Piojó (Atlántico), orientada a la promoción de experiencias de hospedaje rural y turismo de naturaleza. La plataforma presenta opciones de camping y habitaciones, actividades al aire libre, biodiversidad del bosque seco tropical, gastronomía local y compromiso con la conservación ambiental. Desarrollo enfocado en experiencia de usuario, narrativa visual, diseño responsive y claridad en la información para facilitar la reserva y el contacto.",
+    link: "https://tesorostpatl.com.co/melinas/",
+    image: "/projects/melinas.webp",
+    tags: [TAGS.PHP, TAGS.JAVASCRIPT, TAGS.TAILWIND],
+  },
+  {
+    title:
+      "Plataforma Fondo Emprender SENA - Gestión de Registros y Asistencia (Atlántico)",
+    description:
+      "Sistema desarrollado para el Fondo Emprender del SENA en el departamento del Atlántico, enfocado en el control de registro y asistencia de participantes en eventos, capacitaciones y actividades institucionales. Implementación de módulos de gestión de usuarios, registro de asistencia, carga y consulta de material formativo, automatización de notificaciones y panel administrativo para seguimiento operativo.",
+    link: "https://tesorostpatl.com.co/emprende_atlantico/login.php",
+    image: "/projects/emprender.webp",
+    tags: [TAGS.PHP, TAGS.JAVASCRIPT, TAGS.TAILWIND],
+  },
+  {
+    title: "Marketplace Regional - Atlántico",
+    description:
+      "Marketplace regional orientado a la comercialización de productos y servicios de emprendedores del departamento del Atlántico. Plataforma enfocada en la venta directa sin intermediarios, con énfasis en experiencia de usuario, diseño responsive y optimización de rendimiento. Participación en el desarrollo y evolución de la plataforma, asegurando una interfaz clara, funcional y escalable.",
+    link: "https://tesorostpatl.com.co/market/tienda",
+    image: "/projects/market.webp",
+    tags: [TAGS.PHP, TAGS.JAVASCRIPT, TAGS.TAILWIND],
+  },
   {
     title: "Plataforma Red de Emprededores - Sena Emprendimiento Nacional",
     description:
       "Plataforma Red de Emprendedores SENA - Marketplace nacional que conecta +5k emprendedores. Desarrollado con PHP, JavaScript y SQL, implementando autenticación, gestión de perfiles y panel administrativo con altos estándares de seguridad.",
-    link: "https://tecnoparqueatl.com/redemprendedores/tienda",
+    link: "https://tesorostpatl.com.com/redemprendedores/tienda",
     image: "/projects/redemprendedores.webp",
-    tags: [TAGS.PHP,TAGS.JAVASCRIPT,TAGS.TAILWIND],
+    tags: [TAGS.PHP, TAGS.JAVASCRIPT, TAGS.TAILWIND],
   },
   {
     title: "Plataforma Elearning - Cormagdalena",
@@ -44,7 +85,7 @@ const PROJECTS = [
       "Plataforma Educativa CORMAGDALENA - Sistema LMS personalizado que integra complementos propios para +500 usuarios. Desarrollado con PHP, MySQL y JavaScript, implementando módulos de evaluación, seguimiento académico y una interfaz responsive optimizada.",
     link: "https://elearn50.com/moddle/?redirect=0",
     image: "/projects/Cormagdalena.webp",
-    tags: [TAGS.PHP,TAGS.JAVASCRIPT,TAGS.TAILWIND],
+    tags: [TAGS.PHP, TAGS.JAVASCRIPT, TAGS.TAILWIND],
   },
   {
     title: "Plataforma50 - Landing Page Empresarial",
@@ -54,59 +95,63 @@ const PROJECTS = [
     image: "/projects/plataforma50.webp",
     tags: [TAGS.PHP, TAGS.TAILWIND],
   },
-]
+];
 ---
 
 <div class="flex flex-col gap-y-16">
   {
     PROJECTS.map(({ image, title, description, tags, link }) => (
-    <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
-  <div class="w-full md:w-1/2">
-    <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
-      <img alt="Recién llegado vs 5 años en Nueva Zelanda" class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105" loading="lazy" src={image} />
-    </div>
-  </div>
+      <article class="flex flex-col space-x-0 space-y-8 group md:flex-row md:space-x-8 md:space-y-0">
+        <div class="w-full md:w-1/2">
+          <div class="relative flex flex-col items-center col-span-6 row-span-5 gap-8 transition duration-500 ease-in-out transform shadow-xl overflow-clip rounded-xl sm:rounded-xl md:group-hover:-translate-y-1 md:group-hover:shadow-2xl lg:border lg:border-gray-800 lg:hover:border-gray-700 lg:hover:bg-gray-800/50">
+            <img
+              alt="Recién llegado vs 5 años en Nueva Zelanda"
+              class="object-cover object-top w-full h-56 transition duration-500 sm:h-full md:scale-110 md:group-hover:scale-105"
+              loading="lazy"
+              src={image}
+            />
+          </div>
+        </div>
 
-  <div class="w-full md:w-1/2 md:max-w-lg">
-    <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
-      {title}
-    </h3>
-    <div class="flex flex-wrap mt-2">
-      <ul class="flex flex-row mb-2 gap-x-2">
-          {tags.map((tag) => (
-            <li>
-              <span
-                class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
-              >
-                <tag.icon class="size-4" />
-                {tag.name}
-              </span>
-            </li>
-          ))}
-        </ul>
+        <div class="w-full md:w-1/2 md:max-w-lg">
+          <h3 class="text-2xl font-bold text-gray-800 dark:text-gray-100">
+            {title}
+          </h3>
+          <div class="flex flex-wrap mt-2">
+            <ul class="flex flex-row mb-2 gap-x-2">
+              {tags.map((tag) => (
+                <li>
+                  <span
+                    class={`flex gap-x-2 rounded-full text-xs ${tag.class} py-1 px-2 `}
+                  >
+                    <tag.icon class="size-4" />
+                    {tag.name}
+                  </span>
+                </li>
+              ))}
+            </ul>
 
-      <div class="mt-2 text-gray-700 dark:text-gray-400">{description}</div>
-      <footer class="flex items-end justify-start mt-4 gap-x-4">
-          {/* {github && (
+            <div class="mt-2 text-gray-700 dark:text-gray-400">
+              {description}
+            </div>
+            <footer class="flex items-end justify-start mt-4 gap-x-4">
+              {/* {github && (
             <LinkButton href={github}>
               <GitHub class="size-6" />
               Code
               
             </LinkButton>
           )} */}
-          {link && (
-            <LinkButton href={link}>
-              <Link class="size-4" />
-              Preview
-            </LinkButton>
-          )}
-        </footer>
-    </div>
-  </div>
-</article>
+              {link && (
+                <LinkButton href={link}>
+                  <Link class="size-4" />
+                  Preview
+                </LinkButton>
+              )}
+            </footer>
+          </div>
+        </div>
+      </article>
     ))
   }
 </div>
-
-
-
